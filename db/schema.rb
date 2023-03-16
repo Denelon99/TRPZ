@@ -10,37 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_14_123328) do
-  create_table "roles", force: :cascade do |t|
-    t.string "role_name"
+ActiveRecord::Schema[7.0].define(version: 2023_03_16_180248) do
+  create_table "commodities", force: :cascade do |t|
+    t.string "name"
+    t.float "price"
+    t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "storageregions_userregions", id: false, force: :cascade do |t|
-    t.integer "storageregion_id", null: false
-    t.integer "userregion_id", null: false
   end
 
   create_table "storages", force: :cascade do |t|
-    t.string "orientation"
-    t.string "name"
-    t.string "section"
-    t.string "region_name"
+    t.string "mame"
+    t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "commodities_id", null: false
+    t.integer "users_id", null: false
+    t.index ["commodities_id"], name: "index_storages_on_commodities_id"
+    t.index ["users_id"], name: "index_storages_on_users_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "full_name"
+    t.integer "role"
+    t.string "name"
+    t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "role_id", null: false
-    t.integer "storage_id", null: false
-    t.index ["role_id"], name: "index_users_on_role_id"
-    t.index ["storage_id"], name: "index_users_on_storage_id"
   end
 
-  add_foreign_key "users", "roles"
-  add_foreign_key "users", "storages"
+  add_foreign_key "storages", "commodities", column: "commodities_id"
+  add_foreign_key "storages", "users", column: "users_id"
 end

@@ -17,7 +17,7 @@ class StoragesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create storage" do
     assert_difference("Storage.count") do
-      post storages_url, params: { storage: { name: @storage.name, orientation: @storage.orientation, region_id: @storage.region_id, region_name: @storage.region_name, section: @storage.section } }
+      post storages_url, params: { storage: { commodities_id: @storage.commodities_id, location: @storage.location, mame: @storage.mame, users_id: @storage.users_id } }
     end
 
     assert_redirected_to storage_url(Storage.last)
@@ -34,7 +34,7 @@ class StoragesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update storage" do
-    patch storage_url(@storage), params: { storage: { name: @storage.name, orientation: @storage.orientation, region_id: @storage.region_id, region_name: @storage.region_name, section: @storage.section } }
+    patch storage_url(@storage), params: { storage: { commodities_id: @storage.commodities_id, location: @storage.location, mame: @storage.mame, users_id: @storage.users_id } }
     assert_redirected_to storage_url(@storage)
   end
 

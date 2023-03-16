@@ -65,6 +65,6 @@ class StoragesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def storage_params
-      params.require(:storage).permit(:region_id, :orientation, :name, :section, :region_name)
+      params.require(:storage).permit(:mame, :location, :users_id, :commodities_id)
     end
 end
