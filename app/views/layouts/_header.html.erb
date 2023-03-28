@@ -1,11 +1,19 @@
 <header>
-    <nav>
-      <ul>
-        <li><%= link_to I18n.t('header.home') %></li>
-        <li><%= link_to I18n.t('header.about')%></li>
-        <li><%= link_to I18n.t('header.contact')%></li>
-        <li><%= link_to I18n.t("header.english"), url_for(locale: :en) %></li>
-        <li><%= link_to I18n.t("header.ukrainian"), url_for(locale: :uk) %></li>
-      </ul>
-    </nav>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Services</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a>
+  </nav>
+  
+  <div class="header-right">
+    <form action="#" method="get">
+      <input type="text" placeholder="Search...">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    
+    <a href="#"><i class="fa fa-shopping-bag"></i></a>
+    <a href="#">Login/Register</a>
+  </div>
 </header>
