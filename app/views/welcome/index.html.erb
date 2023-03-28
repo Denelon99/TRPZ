@@ -1,6 +1,6 @@
-<h1>Welcome</h1>
-<%= link_to "storages", storages_url%>
+<h1><%= I18n.t('main_page.welcome')%> </h1>
+<%= link_to I18n.t("main_page.storages"), storages_url%>
 <br>
-<%= link_to "commodities", commodities_url%>
+<%= link_to I18n.t("main_page.commodities"), commodities_url%>
 <br>
-<%= link_to "users", users_url%>
+<%= link_to I18n.t("main_page.users"), users_url%>

@@ -1,4 +1,15 @@
 en:
+  header:
+    home: Home
+    about: About us
+    contact: Contact
+    english: English
+    ukrainian: Ukrainian
+  main_page:
+    welcome: Welcome
+    storages: Storages
+    commodities: Commodities
+    users: Users
   activerecord:
     attributes:
       user:

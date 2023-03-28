@@ -1,12 +1,11 @@
 <header>
     <nav>
       <ul>
-        <li><%= link_to 'Home' %></li>
-        <li><%= link_to 'About'%></li>
-        <li><%= link_to 'Contact'%></li>
-        <li><%= link_to "English", url_for(locale: :en) %></li>
-        <li><%= link_to "Українська", url_for(locale: :uk) %></li>
-        <%= I18n.t('activerecord.attributes.user.email')%>
+        <li><%= link_to I18n.t('header.home') %></li>
+        <li><%= link_to I18n.t('header.about')%></li>
+        <li><%= link_to I18n.t('header.contact')%></li>
+        <li><%= link_to I18n.t("header.english"), url_for(locale: :en) %></li>
+        <li><%= link_to I18n.t("header.ukrainian"), url_for(locale: :uk) %></li>
       </ul>
     </nav>
 </header>

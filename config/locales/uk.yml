@@ -1,4 +1,15 @@
 uk:
+  header:
+    home: На головну сторінку
+    about: Про нас
+    contact: Контаки
+    english: Англійська
+    ukrainian: Українська
+  main_page:
+    welcome: Ласкаво просимо
+    storages: Склади
+    commodities: Товари
+    users: Користувачі
   activerecord:
     attributes:
       user:

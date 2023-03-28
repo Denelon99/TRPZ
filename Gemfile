@@ -31,6 +31,8 @@ gem 'rubocop-rake'
 
 gem 'rubocop-performance'
 
+gem 'fasterer', '~>0.9.0'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
