@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fdfeff;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .footer-left p {
+    margin: 0;
+    color: #333;
+  }
+  
+  .footer-right a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .footer-right a:hover {
+    color: #007bff;
+  }

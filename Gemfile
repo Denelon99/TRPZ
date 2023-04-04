@@ -21,8 +21,6 @@ gem 'rubocop', require: false
 
 gem 'rubocop-rails', '~> 2.18'
 
-gem 'devise-i18n'
-
 gem 'bundler-audit'
 
 gem 'rubocop-md'
@@ -62,6 +60,10 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
+
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-bootstrap-views', '~> 1.0'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

@@ -3,6 +3,9 @@ uk:
     home: На головну сторінку
     about: Про нас
     contact: Контаки
+    login: Ввійти
+    logout: Вийти
+    singup: Зареєтсруватись
     english: Англійська
     ukrainian: Українська
   main_page:

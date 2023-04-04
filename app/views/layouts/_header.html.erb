@@ -1,10 +1,10 @@
 <header>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Services</a>
-    <a href="#">About Us</a>
-    <a href="#">Contact Us</a>
+    <a href="#"><%= I18n.t('header.home')%></a>
+    <a href="#"><%= I18n.t('header.contact')%></a>
+    <a href="#"><%= I18n.t('header.about')%></a>
+    <a href="#"><%= link_to I18n.t("header.english"), url_for(locale: :en) %></a>
+    <a href="#"><%= link_to I18n.t("header.ukrainian"), url_for(locale: :uk)%></a>
   </nav>
   
   <div class="header-right">
@@ -12,8 +12,17 @@
       <input type="text" placeholder="Search...">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
-    
-    <a href="#"><i class="fa fa-shopping-bag"></i></a>
-    <a href="#">Login/Register</a>
+    <%- if user_signed_in? %>
+      <div calss="text-end">
+        <%= button_to I18n.t('header.logout'), destroy_user_session_path, method: :delete, form: {turbolink: false}, class:"btn btn-primary me-2" %>
+      </div>
+    <% else %>
+      <%= link_to new_user_session_path do %>
+        <button type="button" class="btn btn-primary me-2"><%= I18n.t('header.login') %></button>
+      <% end %>
+      <%= link_to new_user_registration_path do %>
+        <button type="button" class="btn btn-primary me-2"><%= I18n.t('header.singup') %></button>
+      <% end %>
+    <% end %>
   </div>
 </header>

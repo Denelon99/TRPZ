@@ -3,6 +3,9 @@ en:
     home: Home
     about: About us
     contact: Contact
+    login: Login
+    logout: Logout
+    singup: Sing up
     english: English
     ukrainian: Ukrainian
   main_page:
